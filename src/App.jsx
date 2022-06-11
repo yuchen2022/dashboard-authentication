@@ -6,7 +6,7 @@ import Register from './body/register';
 function App() {
   return (
     <div className="App">
-     {/* <Navbar/> */}
+     <Navbar/>
      <Register/>
     </div>
   );
