@@ -51,6 +51,7 @@ span{
     left: 48px;
     flex: none;
     order: 1;
+    margin-bottom: 12px;
     flex-grow: 0
 }
 

@@ -1,3 +1,4 @@
+import { Button } from "bootstrap";
 import React from "react";
 import './sidebar.css';
 
@@ -5,12 +6,12 @@ const Sidebar = () => {
   return (
     <>
       <div className="container  ">
-        <ul className="sidebar badge bg-primary">
+        <ul className="sidebar ">
           <li>
-            <span>Dashboard</span>
+            <button>Dashboard</button>
           </li>
           <li>
-            <span>LogOut</span>
+            <button>LogOut</button>
           </li>
        
         </ul>
