@@ -1,17 +1,20 @@
-import React from "react";
-import { Container, Row, NavbarBrand } from "react-bootstrap";
-import { ToggleButtonCheckboxProps } from "react-bootstrap";
-import { Col } from "react-bootstrap";
+import React, { useContext } from "react";
+import { NavbarBrand } from "react-bootstrap";
+import palette from "../styles/palette";
+import ThemeContext from "../styles/theme-context";
 import "./navbar.css";
 
 const Navbar = () => {
+  const [theme, setTheme] = useContext(ThemeContext);
+
   return (
     <>
       <div>
         <navbar className="nav">
-          <NavbarBrand className="brand">
-            <div id="menu">
+          <NavbarBrand className="m-2 p-2 d-flex d-row ">
+            <div>
               <svg
+                
                 xmlns="http://www.w3.org/2000/svg"
                 width="18"
                 height="18"
@@ -23,25 +26,28 @@ const Navbar = () => {
               </svg>
               <i class="bi bi-grid-3x3-gap-fill "></i>
             </div>
-            <div id="name">Linkap</div>
+            <div className=" d-flex">Linkap</div>
           </NavbarBrand>
-          <Container>
-            <svg
-              id="sunIcon"
-              xmlns="http://www.w3.org/2000/svg"
+          <div>
+            <svg id="sunIcon"
+            fill={palette[theme].secondary}
+             xmlns="http://www.w3.org/2000/svg"
               width="36"
               height="30"
-          
-
               class="bi bi-brightness-high-fill"
               viewBox="0 0 16 16 "
+              onClick={() => {
+                if (theme === "dark") {
+                  setTheme("light");
+                } else {
+                  setTheme("dark");
+                }
+              }}
+             
             >
-              
               <path d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
             </svg>
-
-           
-          </Container>
+          </div>
         </navbar>
       </div>
     </>

@@ -2,7 +2,6 @@
 
     width: 1440px;
     height: 72px;
-    bottom: 963px;
     background-color: rgba(0, 120, 212, 1);
 }
 
@@ -27,39 +26,13 @@ span{
     top: 12px;
 }
 
-#menu{
-    text-align:center;
-    top: 12px;
-    border-radius: nullpx;
-    width: 48px;
-    height: 48px;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-}
 
 
-#name{
-    
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 0px 8px;
-    top:13px;
-    width: 64px;
-    height: 22px;
-    left: 48px;
-    flex: none;
-    order: 1;
-    margin-bottom: 12px;
-    flex-grow: 0
-}
 
 #sunIcon{
-
+    color:#FFCE31;
     top: 21px;
     left: 1255px;
     position: absolute;
-    fill: rgba(255, 206, 49, 1);
-    ;
+   
 }

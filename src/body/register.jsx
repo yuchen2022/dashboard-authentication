@@ -1,11 +1,12 @@
 import React from "react";
 import "./register.css";
 import { useState } from "react";
-import { Button } from "react-bootstrap";
+
+import { useNavigate } from "react-router-dom";
 
 function Register() {
   const [inputs, setInputs] = useState({});
-
+  const navigate = useNavigate();
   const handleChange = (event) => {
     const name = event.target.name;
     const value = event.target.value;
@@ -42,7 +43,15 @@ function Register() {
           />
         </label>
 
-        <Button >Login</Button>
+        <button
+          onClick={() => {
+            navigate("/Dashboard");
+          }}
+          className="  btn btn-primary w-50 justify-content-center d-flex m-2 p-2  "
+        >
+          Login
+          <link to="/Dashboard"></link>
+        </button>
       </form>
     </div>
   );

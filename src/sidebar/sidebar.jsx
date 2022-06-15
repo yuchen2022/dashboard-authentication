@@ -1,8 +1,10 @@
-import { Button } from "bootstrap";
 import React from "react";
-import './sidebar.css';
+import "./sidebar.css";
+
+import { useNavigate } from "react-router-dom";
 
 const Sidebar = () => {
+  const navigate = useNavigate();
   return (
     <>
       <div className="container  ">
@@ -11,9 +13,16 @@ const Sidebar = () => {
             <button>Dashboard</button>
           </li>
           <li>
-            <button>LogOut</button>
+            <hr id="border" />
+            <button
+              onClick={() => {
+                navigate("/");
+              }}
+            >
+              LogOut
+            </button>
           </li>
-       
+          <hr id="log" />
         </ul>
 
         <div className="content"></div>

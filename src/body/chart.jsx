@@ -1,23 +1,28 @@
 import React from 'react';
 import { PieChart, Pie} from 'recharts';
-
+import { useState } from 'react';
 
 const Chart = () => {
 
-// Sample data
-const data = [
-{name: 'Geeksforgeeks', students: 400},
-{name: 'Technical scripter', students: 700},
-{name: 'Geek-i-knack', students: 200},
 
-];
+const [datas,setdatas] = useState([
+{name: 'Type A', value: 2 ,fill:'#007AFF' },
+{name: 'Type B', value: 5, fill:'#FB8832'},
+{name: 'Type C', value: 1, fill:'#9013FE'},
+
+])
+
 
 
 return (
     <>
-		<PieChart width={200} height={200}>
-		<Pie data={data} dataKey="students" outerRadius={100} fill="green" />
-		</PieChart>
+	{
+	datas.map((d,index) => (
+	<PieChart id='chart'>
+		<Pie  dataKey="index" value={d.value} outerRadius={100} fill={d.fill}  />
+		</PieChart>))
+		}
+		
         </>
 );
 };
