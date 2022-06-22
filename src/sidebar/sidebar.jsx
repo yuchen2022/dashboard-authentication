@@ -1,14 +1,13 @@
 import React from "react";
 import "./sidebar.css";
-
 import { useNavigate } from "react-router-dom";
 
 const Sidebar = () => {
   const navigate = useNavigate();
   return (
     <>
-      <div className="container  ">
-        <ul className="sidebar ">
+      <div className="container   ">
+        <ul className="sidebar border-top border-primary border-2">
           <li>
             <button>Dashboard</button>
           </li>

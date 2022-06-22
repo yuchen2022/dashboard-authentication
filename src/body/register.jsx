@@ -44,12 +44,21 @@ function Register() {
         </label>
 
         <button
+          id="loginButton"
           onClick={() => {
             navigate("/Dashboard");
           }}
-          className="  btn btn-primary w-50 justify-content-center d-flex m-2 p-2  "
         >
-          Login
+          <span
+            style={{
+              color: "white",
+              position: "absolute",
+              fontWeight: "bold",
+              left: "122px",
+            }}
+          >
+            LOGIN
+          </span>
           <link to="/Dashboard"></link>
         </button>
       </form>

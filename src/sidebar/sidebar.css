@@ -65,11 +65,12 @@
 }
 #border{
     border: 1px solid #869BFC;
-    position: absolute;
+    position: fixed;
     width: 296px;
     height: 0px;
-    top: 60px;
+    top: 136px;
     left: 0px;
+  
   
 }
  #log{

@@ -17,8 +17,6 @@ span{
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 0px;
-    
     position: absolute;
     width: 112px;
     height: 48px;
@@ -36,3 +34,4 @@ span{
     position: absolute;
    
 }
+
